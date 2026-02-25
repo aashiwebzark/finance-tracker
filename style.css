@@ -1,0 +1,222 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: #0f172a;  /* dark navy */
+    color: #e2e8f0;
+}
+
+header {
+    background: #0b1120;
+    color: #93c5fd;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid rgba(147, 197, 253, 0.2);
+}
+.container {
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+/* Summary Cards */
+.summary-cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.card {
+    flex: 1;
+    min-width: 250px;
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+    text-align: center;
+    border: 1px solid rgba(147, 197, 253, 0.08);
+}
+
+.card h3 {
+    color: #93c5fd;
+}
+
+.card p {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 30px rgba(147, 197, 253, 0.25);
+    border-color: rgba(147, 197, 253, 0.4);
+}
+
+/* Form Section */
+.form-section,
+.chart-section,
+.transaction-section {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 16px;
+    margin-bottom: 30px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+    border: 1px solid rgba(147, 197, 253, 0.08);
+}
+
+.form-section h2 {
+    margin-bottom: 15px;
+    color: #1e3a8a;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+input, select {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid rgba(147, 197, 253, 0.2);
+    background: #0f172a;
+    color: #e2e8f0;
+    margin-top: 5px;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #93c5fd;
+    box-shadow: 0 0 10px rgba(147, 197, 253, 0.4);
+}
+
+.btn {
+    background: #3b82f6;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.btn:hover {
+    background: #60a5fa;
+    box-shadow: 0 6px 20px rgba(147, 197, 253, 0.6);
+    transform: translateY(-2px);
+}
+.transaction-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+    background: #0f172a;
+}
+
+.transaction-item:hover {
+    background: #1e3a8a;
+    box-shadow: 0 4px 15px rgba(147, 197, 253, 0.2);
+}
+
+/* Chart Section */
+
+.transaction-section h2 {
+    margin-bottom: 15px;
+    color: #1e3a8a;
+}
+
+#transactionList {
+    list-style: none;
+}
+
+.transaction-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.delete-btn {
+    background: #ef4444;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.delete-btn:hover {
+    background: #dc2626;
+    transform: scale(1.1);
+}
+.chart-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#expenseChart {
+    max-width: 350px;
+    max-height: 350px;
+}
+/* Responsive */
+@media (max-width: 768px) {
+    .summary-cards {
+        flex-direction: column;
+    }
+}
+* {
+    transition: all 0.3s ease;
+}
+/* Modal container */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  overflow: auto;
+  background: rgba(0,0,0,0.5);
+}
+
+/* Modal content */
+.modal-content {
+  background: #1e293b; /* dark card color */
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 16px;
+  max-width: 700px;
+  color: #e2e8f0;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+ 
+  
+}
+
+/* Close button */
+.close {
+  color: #93c5fd;
+  float: right;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #fff;
+}
+
+/* Cards inside modal */
+.modal-cards {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  gap: 15px;
+}
